@@ -23,9 +23,16 @@ function App() {
     
   }
 
+  const todoDeleteHandler = (index) =>{
+    const todos=[...todosState];
+    todos.splice(index, 1);
+    setTodos(todos);
+
+  }
+
   return (
     <>
-      <Todos list={todosState} todoChanged={todoChangeHnadler} />
+      <Todos list={todosState} todoChanged={todoChangeHnadler} todoDelete={todoDeleteHandler} />
     </>
   )
 }
