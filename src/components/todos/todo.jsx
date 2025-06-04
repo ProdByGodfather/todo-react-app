@@ -6,7 +6,7 @@ const Todo=(props)=>{
         <>
             <div className="todos">
                 <p>Number {props.id}</p>
-                <input type="text" class="todo" value={props.todo} />
+                <input type="text" class="todo" value={props.todo} onChange={props.todoChanged} />
             </div>
         </>
     )
