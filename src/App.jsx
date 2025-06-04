@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Todos from './components/todos/todo'
+import React, { useState } from 'react'
+import Todos from './components/todos/todos'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const[todos, setTodos] = useState(
+    [
+      {id:0, todo:"Test 1"},
+      {id:1, todo:"Godfather"},
+    ]
+  )
 
   return (
     <>
-      <Todos />
+      <Todos list={todos} />
     </>
   )
 }

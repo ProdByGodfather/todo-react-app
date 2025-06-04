@@ -1,15 +1,15 @@
 import React from "react";
 import './todo.css'
 
-const Todos=(props)=>{
+const Todo=(props)=>{
     return(
         <>
             <div className="todos">
-                <p>Number 1</p>
-                <input type="text" class="todo" />
+                <p>Number {props.id}</p>
+                <input type="text" class="todo" value={props.todo} />
             </div>
         </>
     )
 }
 
-export default Todos
+export default Todo
